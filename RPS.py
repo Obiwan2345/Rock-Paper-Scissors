@@ -60,35 +60,46 @@ def scissors(): #When scissors is clicked
 def update_score():
     Label_Score.config(text=f"You: {user_score} | Computer: {computer_score}")
 
+def show_score():
+    update_score()
+    page3.tkraise()
+
+
 root = tk.Tk()
 root.title("Rock Paper Scissors Game")
-root.geometry("420x280")
+root.geometry("420x320")
 
 container = ttk.Frame(root, padding=10)
 container.pack(fill="both", expand=True)
 
 page1 = ttk.Frame(container)
 page2 = ttk.Frame(container)
+page3 = ttk.Frame(container)
 
-for p in (page1, page2):
+for p in (page1, page2, page3):
     p.place(relx=0, rely=0, relwidth=1, relheight=1) # stack pages full size
 
 def show_page1():
     page1.tkraise()
 
 # Page 1
-ttk.Label(page1, text="ROCK, PAPER, SCISSORS", font=("Segoe UI", 22)).pack(pady=10)
+ttk.Label(page1, text="ROCK, PAPER, SCISSORS", font=("Press Start 2P", 14)).pack(pady=10)
 ttk.Label(page1, text="Pick an option").pack(pady=10)
 ttk.Button(page1, text="Rock", command=rock).pack(pady=10)
 ttk.Button(page1, text="Paper", command=paper).pack(pady=10)
 ttk.Button(page1, text="Scissors", command=scissors).pack(pady=10)
+ttk.Button(page1, text="Show score", command=show_score).pack(pady=10)
 
 #Page 2
-Label_Score = ttk.Label(page2, text="You: 0 | Computer: 0", font=("Segoe UI", 14))
-Label_Score.pack(pady=10)
 Label_Result = ttk.Label(page2, text="")
 Label_Result.pack(pady=10)
 ttk.Button(page2, text="Play Again", command=show_page1).pack(pady=10)
+
+#Page 3
+Label_Score = ttk.Label(page3, text="You: 0 | Computer: 0", font=("Segoe UI", 14))
+Label_Score.pack(pady=10)
+ttk.Button(page3, text="Go back", command=show_page1).pack(pady=10)
+
 
 show_page1()
 root.mainloop()
