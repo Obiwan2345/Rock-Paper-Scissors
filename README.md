@@ -10,7 +10,7 @@ A score counter is also added so the user knows who is winning.
 
 # How to run
 - Clone this repository:
-git clone https://github.com/Obiwan2345/aircraft-simulation.git
+git clone https://github.com/Obiwan2345/Rock-Paper-Scissors.git
 - Run the simulation
   RPS.py
 
