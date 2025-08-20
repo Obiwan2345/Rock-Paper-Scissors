@@ -7,7 +7,7 @@ A score counter is also added so the user knows who is winning.
 - The user then clicks one of the button options - rock, paper or scissors
 - The computer then also randomly picks from the options
 - If the computer wins, it prints: *Computer picks (option), computer wins* same with the user if they win.
-- If first to 5 was clicked, the winner after winning five rounds will be displayed like: *player won* or *computer one*. Same with first to 10 after winning 10 rounds
+- If first to 5 was clicked, the winner after winning five rounds will be displayed like: *player won* or *computer won*. Same with first to 10 after winning 10 rounds
 - Also if unlimited is clicked, the score can still be accessed in the show score option. Same with other game modes.
 
 # How to run
