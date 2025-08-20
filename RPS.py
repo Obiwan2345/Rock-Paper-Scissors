@@ -84,7 +84,7 @@ def show_page1():
 
 # Page 1
 ttk.Label(page1, text="ROCK, PAPER, SCISSORS", font=("Press Start 2P", 14)).pack(pady=10)
-ttk.Label(page1, text="Pick an option").pack(pady=10)
+ttk.Label(page1, text="Click an option to play", font=("Press Start 2P", 8)).pack(pady=10)
 ttk.Button(page1, text="Rock", command=rock).pack(pady=10)
 ttk.Button(page1, text="Paper", command=paper).pack(pady=10)
 ttk.Button(page1, text="Scissors", command=scissors).pack(pady=10)
