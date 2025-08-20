@@ -1,12 +1,14 @@
 # Rock Paper Scissors
-This simple python game allows the user to play rock paper scissors with the computer.
+This simple python game allows the user to play rock paper scissors with the computer. Fully interactive and easy to understand
 A score counter is also added so the user knows who is winning.
 
 # How it Works
-- The user clicks one of the button optionS - rock, paper or scissors
+- The user picks a game mode; whether they want to play unlimited games or they want to do first to 5 or firts to 10 with the computer.
+- The user then clicks one of the button options - rock, paper or scissors
 - The computer then also randomly picks from the options
-- If the computer wins, it prints: *Computer picks (option), computer wins*, And the score is printed on the top of the window
-- The user can also click play again if they wish to have another go, with the score still being saved!
+- If the computer wins, it prints: *Computer picks (option), computer wins* same with the user if they win.
+- If first to 5 was clicked, the winner after winning five rounds will be displayed like: *player won* or *computer one*. Same with first to 10 after winning 10 rounds
+- Also if unlimited is clicked, the score can still be accessed in the show score option. Same with other game modes.
 
 # How to run
 - Clone this repository:
