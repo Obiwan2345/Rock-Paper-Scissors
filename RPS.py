@@ -68,17 +68,21 @@ def update_score():
         # Check if either player reached 5
         if user_score == 5 and computer_score < 5:
             page5.tkraise()
-            Label_Score2.config(text="PLAYER WINS", font=("Press Start 2P", 14))
+            Label_Score2.config(text=f"PLAYER WINS", font=("Press Start 2P", 14))
+            Label_Score3.config(text=f"you: {user_score} | Computer: {computer_score}", font=("Segoe", 10))
         elif computer_score == 5 and user_score < 5:
             page5.tkraise()
             Label_Score2.config(text="COMPUTER WINS", font=("Press Start 2P", 14))
+            Label_Score3.config(text=f"you: {user_score} | Computer: {computer_score}", font=("Segoe", 10))
     elif game_mode == "first10":
         if user_score == 10 and computer_score < 10:
             page5.tkraise()
             Label_Score2.config(text="PLAYER WINS", font=("Press Start 2P", 14))
+            Label_Score3.config(text=f"you: {user_score} | Computer: {computer_score}", font=("Segoe", 10))
         elif computer_score == 10 and user_score < 10:
             page5.tkraise()
             Label_Score2.config(text="COMPUTER WINS", font=("Press Start 2P", 14))
+            Label_Score3.config(text=f"You: {user_score} | Computer: {computer_score}", font=("Segoe", 10))
 
 def unlimited():
     global game_mode
@@ -163,8 +167,9 @@ ttk.Button(page4, text="Restart Game", command=restart_game).pack(pady=10) # Sta
 # Page 5
 Label_Score2 = ttk.Label(page5, text="") # Configured to show who won the entire round only for first to 5 and first to 10
 Label_Score2.pack(pady=10)
+Label_Score3 = ttk.Label(page5, text="") # Configured to show who won the entire round only for first to 5 and first to 10
+Label_Score3.pack(pady=10)
 ttk.Button(page5, text="Restart Game", command=restart_game).pack(pady=10)
-ttk.Button(page5, text="Show score", command=show_score).pack(pady=10)
 
 show_page1()
 root.mainloop()
